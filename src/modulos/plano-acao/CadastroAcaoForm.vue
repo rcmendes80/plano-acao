@@ -85,7 +85,6 @@ const grupos = [
   {id:9, nome:'Consumo'}
 ]
 
-
 const itens_observaveis = [
   {id:1, nome:'Cliente com contrato assinado possui data contratação e Valor contratado'},
   {id:2, nome:'Novidades do mês corrente atualizadas'},
