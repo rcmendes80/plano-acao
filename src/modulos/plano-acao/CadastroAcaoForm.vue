@@ -108,6 +108,38 @@
 </template>
 
 <script>
+
+
+export default {
+  name: "CadastroAcaoForm",
+  data() {
+    return {
+      itemEmEdicao: {
+        processo: {},
+        tema: {},
+        grupo: {},
+        item: {},
+        acao: ''
+      },
+      lista_acoes_selecionadas:[],
+      processos: processos,
+      temas: temas,
+      grupos: grupos,
+      itens_observaveis,
+      lista_acoes : []
+    };
+  },
+  methods : {
+    addAcao (event) {
+      console.log('Adicionado!!!', JSON.stringify(this.itemEmEdicao));
+      event.preventDefault();
+      this.lista_acoes.push(this.itemEmEdicao);
+      this.itemEmEdicao = [];
+      
+    }
+  }
+};
+
 const processos = [
   { id: 1, nome: "Gestão de Produtos" },
   { id: 2, nome: "Monitoração e Incidentes" }
@@ -150,36 +182,6 @@ const itens_observaveis = [
       "Os concorrentes lançaram novas funcionalidades ou apareceu algum outro concorrente"
   }
 ];
-
-export default {
-  name: "CadastroAcaoForm",
-  data() {
-    return {
-      itemEmEdicao: {
-        processo: {},
-        tema: {},
-        grupo: {},
-        item: {},
-        acao: ''
-      },
-      lista_acoes_selecionadas:[],
-      processos: processos,
-      temas: temas,
-      grupos: grupos,
-      itens_observaveis,
-      lista_acoes : []
-    };
-  },
-  methods : {
-    addAcao (event) {
-      console.log('Adicionado!!!', JSON.stringify(this.itemEmEdicao));
-      event.preventDefault();
-      this.lista_acoes.push(this.itemEmEdicao);
-      this.itemEmEdicao = [];
-      
-    }
-  }
-};
 </script>
 
 <style scopped>
