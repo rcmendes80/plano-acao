@@ -90,7 +90,7 @@
         </tfoot>
         -->
         <tbody>
-          <tr v-for="(acao, index) in lista_acoes">
+          <tr v-for="(acao, index) in lista_acoes" :key="index">
             <th><input type="checkbox" :value="index" v-model="lista_acoes_selecionadas"/></th>
              <th>{{index}}</th>
             <td>{{acao.processo.nome}}</td>
